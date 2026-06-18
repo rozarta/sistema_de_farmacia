@@ -229,7 +229,7 @@ class InventarioMixin:
         buttons_frame.pack(fill="x", padx=20, pady=20)
 
         # Botones de guardar y cancelar
-        ctk.CTkButton(buttons_frame, text="Guardar producto", fg_color="#10b981", hover_color="#059669", command=save_new_product).pack(side="right", padx=(5, 0))
+        ctk.CTkButton(buttons_frame, text="Guardar producto ", fg_color="#10b981", hover_color="#059669", command=save_new_product).pack(side="right", padx=(5, 0))
         ctk.CTkButton(buttons_frame, text="Cancelar", fg_color="gray", hover_color="darkgray", command=add_win.destroy).pack(side="right")
 
     def delete_product(self):
