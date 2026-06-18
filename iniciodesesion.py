@@ -92,7 +92,7 @@ class App(ctk.CTk):
         )
         self.label_iniciar.pack(pady=(5, 5)) 
         
-        # --- CAMPO DE TEXTO: USUARIO ---
+        # --- CAMPO DE TEXTO: USUARIO ---   
         self.mail_entry = ctk.CTkEntry(
             self.main_frame, 
             width=250, 
@@ -125,12 +125,12 @@ class App(ctk.CTk):
         password = self.pass_entry.get()
         
         if email == "admin@farmacia.com" and password == "1234":
-            self.destroy()
             messagebox.showinfo("Éxito", f"Bienvenido de nuevo, {email}")
             subprocess.Popen(
                 [sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "pantallaprincipal.py")],
                 cwd=os.path.dirname(os.path.abspath(__file__))
             )
+            self.destroy()
             
         elif "@" not in email or email not in ".com":
             messagebox.showinfo("Error", f"campo de email sin @ o .com")
